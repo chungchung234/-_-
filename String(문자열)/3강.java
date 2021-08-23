@@ -14,17 +14,18 @@ class Main{
         //     if(x>65&&x<92)answer+=(char)(x+32);
         //     else answer+=(char)(x-32);
         // }
+        //xor 연산
         for(char x : str.toCharArray()){
             answer+=(char)(x^32);
         }
         return answer;
     }
 
-public static void main(String[] args){
-    Main T= new Main();
-    Scanner kb = new Scanner(System.in);
-
-    String str=kb.next();
-     System.out.print(T.solution(str));
-    }
+    public static void main(String[] args){
+        Scanner in=new Scanner(System.in);
+        int input1 = in.nextInt();
+        int input2 = in.nextInt();
+        System.out.println(input1 + input2);
+        return ;
+      }
 }
