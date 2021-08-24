@@ -1,14 +1,15 @@
-//중복문자 제거
-
 import java.util.*;
 
 class Main {
     public String solution(String str) {
-        String answer="";
-        int i=0;
-        for(char c: str.toCharArray()){
-            if(answer.indexOf(c)==-1)
-                answer+=c;
+        String answer="YES";
+		str.toUpperCase();
+      	Stack<String> st = new Stack<String>();
+      	for(char c:str.toCharArray()){
+         	 st.push(String.valueOf(c));
+        }
+        for(char c:str.toCharArray()){
+         	 if(st.pop()!=String.valueOf(c))answer="NO";
         }
         return answer;
     }
