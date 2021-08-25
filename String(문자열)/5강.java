@@ -1,5 +1,5 @@
 //알파벳만 뒤집기
-//시간복잡도 133ms
+//시간 133ms
 import java.util.*;
 
 class Main {

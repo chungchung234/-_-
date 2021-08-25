@@ -7,14 +7,14 @@ class Main{
         str= str.toUpperCase();
         t=Character.toUpperCase(t);
         // 일반 for문 
-        //시간복잡도 126ms
+        //시간 126ms
         // for( int i=0; i<str.length(); i++){
         //     if(str.charAt(i)==t){
         //         answer++;
         //     }
         // }
         // for each문
-        //시간복잡도 114ms
+        //시간 114ms
         for(char x : str.toCharArray()){
             if(x==t)answer++;
         }

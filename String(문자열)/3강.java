@@ -8,7 +8,7 @@ class Main{
         String answer="";
         int m = Integer.MIN_VALUE, pos;
         //스플릿 메소드 사용 
-        //시간복잡도 114ms
+        //시간 114ms
         String[] s=str.split(" ");
         for(String x : s){
             int len = x.length();
@@ -18,7 +18,7 @@ class Main{
         }
     }
     //IndexOf 사용
-    //시간복잡도 122ms
+    //시간 122ms
     // str+=' ';
     // while((pos=str.indexOf(' '))!=-1){
     //     String tmp=str.substring(0, pos);

@@ -8,7 +8,7 @@ class Main {
         ArrayList<String> answer = new ArrayList<>();
 
         // 포문으로 직접 뒤집는 방법
-        // 시간복잡도 126ms
+        // 시간 126ms
         // for(String x : str){
         // String alpha="";
         // char[] y = x.toCharArray();
@@ -19,7 +19,7 @@ class Main {
         // }
 
         // StringBuilder reverse() 함수 사용
-        // 시간복잡도 123ms
+        // 시간복123ms
         // for(String x: str){
         // String tmp = new StringBuilder(x).reverse().toString();
         // answer.add(tmp);
