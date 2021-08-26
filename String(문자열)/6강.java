@@ -5,10 +5,13 @@ class Main {
     public String solution(String str) {
         String answer="";
         for(char c: str.toCharArray()){
-            if(str.indexOf(c)==-1)answer+=c;
+            if(answer.indexOf(c)==-1)answer+=c;
         }        
         return answer;
     }
+    
+    
+    
 
     public static void main(String[] args) {
         Main T = new Main();

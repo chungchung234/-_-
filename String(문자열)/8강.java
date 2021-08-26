@@ -1,17 +1,12 @@
-//팬린드롬
-//시간 115ms
+//숫자만 추출
+//시간 117ms
 import java.util.*;
 
 class Main {
-    public String solution(String str) {
-        String answer = "YES";
-        str = str.toUpperCase().replaceAll("[^A-Z]", "");
-        for (int i = 0; i < str.length() / 2; i++) {
-
-            if (str.charAt(i) != str.charAt(str.length() - 1 - i))
-
-                answer = "NO";
-        }
+    public int solution(String str) {
+        int answer = 0;
+        str = str.toUpperCase().replaceAll("[^0-9]", "");
+        answer= Integer.parseInt(str);
 
         return answer;
     }
