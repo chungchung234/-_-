@@ -4,18 +4,30 @@
 import java.util.*;
 
 class Main {
-    public int solution(String str) {
-        int answer = 0;
-        str = str.toUpperCase().replaceAll("[^0-9]", "");
-        answer= Integer.parseInt(str);
+    public String solution(String str) {
+        String answer = "";
+        int count=1;
+        char[] c=str.toCharArray();
+        for(int i=0;i<str.length();i++){
+            if(answer.charAt(i-1)==c[i]){
+                count++;
+            }
+            else if(count!=1){
+                answer+=Integer.toString(count);
+                count=1;
+              	answer+=c[i];
+
+            }
+        }
+        
         return answer;
     }
 
     public static void main(String[] args) {
         Main T = new Main();
         Scanner kb = new Scanner(System.in);
-        String str = kb.nextLine();
-        System.out.println(T.solution(str));
+        String str = kb.next();
+        System.out.print(T.solution(str));
 
     }
 }
