@@ -1,16 +1,19 @@
+
 //큰 수 출력하기
 //125ms
 import java.util.*;
 
 class Main {
-    public ArrayList<Integer> solution(int[] num, int n) {
+    public int solution(int[] num, int n) {
         ArrayList<Integer> answer = new ArrayList<>();
-      	answer.add(num[0]);
-        for (int i=1; i < n; i++) {
-            if (num[i] > num[i - 1])
-                answer.add(num[i]);
+        answer.add(num[0]);
+      int x=1;
+        for (int i = 1; i < n; i++) {
+            if (num[i] > answer.get(x))
+            {answer.add(num[i]);
+             x++;}
         }
-        return answer;
+        return answer.size();
 
     }
 
@@ -22,8 +25,7 @@ class Main {
         for (int i = 0; i < n; i++) {
             num[i] = kb.nextInt();
         }
-        for (int x : T.solution(num, n))
-            System.out.print(x + " ");
+        System.out.print(T.solution(num, n));
 
     }
 }
