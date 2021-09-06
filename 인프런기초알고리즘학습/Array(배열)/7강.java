@@ -1,22 +1,26 @@
-//소수
+//점수계산
 //131ms
 import java.util.*;
 class Main {	
-	public int solution(int n){
-		int cnt=0;
-		int[] ch = new int[n+1];
-		for(int i=2; i<=n; i++){
-			if(ch[i]==0){
-				cnt++;
-				for(int j=i; j<=n; j=j+i) ch[j]=1;
-			}
-		}
-		return cnt;
+	public int solution(int n,int[] m){
+		int answer=m[0];
+      	int count=1;
+		for(int i=0; i<n ;i++){
+         	if(m[i]!=0){
+				answer+=count++;
+            }
+          else count=1;
+        }
+		return answer;
 	}
 	public static void main(String[] args){
 		Main T = new Main();
 		Scanner kb = new Scanner(System.in);
-		int n=kb.nextInt();
-		System.out.println(T.solution(n));
+		int n = kb.nextInt();
+		int[] m = new int[n];
+		for (int i = 0; i < n; i++) {
+			m[i] = kb.nextInt();
+		}
+		System.out.println(T.solution(n,m));
 	}
 }
