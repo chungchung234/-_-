@@ -1,17 +1,18 @@
 
-//큰 수 출력하기
-//125ms
+//보이는 학생
+//610ms
 import java.util.*;
 
 class Main {
     public int solution(int[] num, int n) {
         ArrayList<Integer> answer = new ArrayList<>();
         answer.add(num[0]);
-      int x=1;
+        int x = 0;
         for (int i = 1; i < n; i++) {
-            if (num[i] > answer.get(x))
-            {answer.add(num[i]);
-             x++;}
+            if (num[i] > answer.get(x)) {
+                answer.add(num[i]);
+                x++;
+            }
         }
         return answer.size();
 
